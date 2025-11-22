@@ -1,0 +1,25 @@
+{
+  "name": "server-status-bot",
+  "version": "1.0.0",
+  "description": "Minecraft Server Status bot!",
+  "homepage": "https://github.com/tocsikc/server-status-bot#readme",
+  "bugs": {
+    "url": "https://github.com/tocsikc/server-status-bot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tocsikc/server-status-bot.git"
+  },
+  "license": "ISC",
+  "author": "@tocsikc",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "discord.js": "^14.25.0",
+    "node-cron": "^4.2.1"
+  }
+}
