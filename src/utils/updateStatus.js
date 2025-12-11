@@ -8,7 +8,7 @@ async function getData(serverIP) {
         return null;
     }
 
-    const res = await axios.get(`https://api.mcsrvstat.us/3/${serverIP}`);
+    const res = await axios.get(`https://api.mcstatus.io/status/java/${serverIP}`);
     return res.data;
 }
 
@@ -38,7 +38,7 @@ async function updateServerStatus(message, serverIP, givenVersion = null) {
 
     if (isOnline && data.version !== '◉ Sleeping') {
         status = '`🟩` Server Online';
-        version = data.version;
+        version = data.version.name_clean;
         color = '#79ec40'
 
     } else {
@@ -49,7 +49,7 @@ async function updateServerStatus(message, serverIP, givenVersion = null) {
 
     const playersFormatted =
         playersList.length > 0
-            ? playersList.map(p => `\`${p.name}\``).join(', ')
+            ? playersList.map(p => `\`${p.name_clean}\``).join(', ')
             : '`No players online`';
 
     const embed = new EmbedBuilder()
